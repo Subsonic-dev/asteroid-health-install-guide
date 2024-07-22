@@ -12,8 +12,11 @@ sudo nano  /usr/lib/modprobe.d/50-blacklist-rndis.conf
 comment out each line so that it looks like this:
 
 #RNDIS is considered insecure (bsc#1205767, jsc#PED-5731)
+
 #blacklist rndis_wlan
+
 #blacklist usb_f_rndis
+
 #blacklist rndis_host
 
 # Step 2: Test you can now SSH onto the watch 
