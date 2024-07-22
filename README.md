@@ -82,3 +82,4 @@ If you found this guide helpful please star it so others can find it and if you 
 | ------------- | ------------- |
 | Asteroid SSH guide | https://wiki.asteroidos.org/index.php/SSH|
 | Asteroid Installing packages  | https://wiki.asteroidos.org/index.php/Watchface_and_Package_Installation#Installation_of_prebuilt_packages |
+| Asteroid internet connection | https://wiki.asteroidos.org/index.php/IP_Connection |
