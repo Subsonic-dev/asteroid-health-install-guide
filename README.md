@@ -76,4 +76,9 @@ If you encounter any problems that this guide cannot solve I have linked my sour
 If you found this guide helpful please star it so others can find it and if you have any suggetions please open a pull request or issue. 
 
 
+# Useful resources 
 
+| Resource  | Link |
+| ------------- | ------------- |
+| Asteroid SSH guide | https://wiki.asteroidos.org/index.php/SSH|
+| Asteroid Installing packages  | https://wiki.asteroidos.org/index.php/Watchface_and_Package_Installation#Installation_of_prebuilt_packages |
