@@ -3,7 +3,7 @@ A quick install guide for Asteroid OS watched on how to install pre made package
 
 Background: This is a quick guide of the steps I used for a Ticwatch pro 2020 (Catfish) using a laptop running Opensuse Tumbleweed and using SSH over USB. As such these steps are written with Linux users in mind but the general principals still apply. 
 
-#Step 1: Preparing the laptop 
+# Step 1: Preparing the laptop 
 
 On Linux installs with a newer kernal RDNIS (the protocol we need to use) is disabled by default. We need to run the following commands to enable it:
 ```
@@ -16,7 +16,7 @@ comment out each line so that it looks like this:
 #blacklist usb_f_rndis
 #blacklist rndis_host
 
-#Step 2: Test you can now SSH onto the watch 
+# Step 2: Test you can now SSH onto the watch 
 
 Plug in the watch and run the following command to verify you can connect: 
 ```
@@ -25,7 +25,7 @@ ssh root@192.168.2.15
 If it does not connect see <link> for troubleshooting, otherwise proceed to step 3. 
 
 
-#Step 3: Giving the watch a connection to the internet
+# Step 3: Giving the watch a connection to the internet
 Before we can download packages to the watch we need to connect it to the internet. 
 
 Run in a terminal on your **computer**: 
@@ -57,7 +57,7 @@ If this comes up with an error make sure you connected with the user "root" and 
 ping 8.8.8.8 
 ```
 
-#Step 5: Installing the package
+# Step 5: Installing the package
 Now we have an internet connection we can install any premade package from https://github.com/AsteroidOS/meta-asteroid-community/tree/master using opkg install <package> 
 
 So to install asteroid health we want: 
@@ -65,7 +65,7 @@ So to install asteroid health we want:
 opkg install asteroid-health
 ```
 
-#Step 6: Enjoy your new app!
+# Step 6: Enjoy your new app!
 And that's it. Assuming you did not get any errors you have now installed Asteroid health. 
 
 If you encounter any problems that this guide cannot solve I have linked my source material below. If you are still struggling join the Asteroid OS community on Matrix (https://asteroidos.org/contact/) and a helpful member of the community might be able to help you. 
