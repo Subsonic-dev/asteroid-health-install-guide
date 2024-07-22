@@ -3,7 +3,7 @@ A quick install guide for Asteroid OS watched on how to install pre made package
 
 Background: This is a quick guide of the steps I used for a Ticwatch pro 2020 (Catfish) using a laptop running Opensuse Tumbleweed and using SSH over USB. As such these steps are written with Linux users in mind but the general principals still apply. 
 
-# Step 1: Preparing the laptop 
+# Step 1: Preparing the laptop/computer 
 
 On Linux installs with a newer kernal RDNIS (the protocol we need to use) is disabled by default. We need to run the following commands to enable it:
 ```
