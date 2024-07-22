@@ -6,9 +6,9 @@ Background: This is a quick guide of the steps I used for a Ticwatch pro 2020 (C
 #Step 1: Preparing the laptop 
 
 On Linux installs with a newer kernal RDNIS (the protocol we need to use) is disabled by default. We need to run the following commands to enable it:
-
+```
 sudo nano  /usr/lib/modprobe.d/50-blacklist-rndis.conf
-
+```
 comment out each line so that it looks like this:
 
 #RNDIS is considered insecure (bsc#1205767, jsc#PED-5731)
@@ -19,17 +19,22 @@ comment out each line so that it looks like this:
 #Step 2: Test you can now SSH onto the watch 
 
 Plug in the watch and run the following command to verify you can connect: 
+```
 ssh root@192.168.2.15
-
+```
 If it does not connect see <link> for troubleshooting, otherwise proceed to step 3. 
 
 
 #Step 3: Giving the watch a connection to the internet
 Before we can download packages to the watch we need to connect it to the internet. 
 
-Run in a terminal on your computer: 
+Run in a terminal on your **computer**: 
+```
 echo 1 > /proc/sys/net/ipv4/ip_forward
+```
+```
 iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+```
 
 Make sure to replace **eth0** with the name of the interface that you use to connect to the internet, i.e wlps20 was mine because I conneced via wifi, so it would look like 
 
@@ -37,19 +42,28 @@ sudo iptables -t nat -A POSTROUTING -o wlps20 -j MASQUERADE
 
 #Step 4: Checking the watch can connect to the internet and downloading the latest package list
 To download the latest package list we first need to connect to the watch again:
+
+```
 ssh root@192.168.2.15
+```
 
 And run:
+```
 opkg update 
+```
 
 If this comes up with an error make sure you connected with the user "root" and that the watch can reach the internet. Try running:
+```
 ping 8.8.8.8 
+```
 
 #Step 5: Installing the package
 Now we have an internet connection we can install any premade package from https://github.com/AsteroidOS/meta-asteroid-community/tree/master using opkg install <package> 
 
 So to install asteroid health we want: 
+```
 opkg install asteroid-health
+```
 
 #Step 6: Enjoy your new app!
 And that's it. Assuming you did not get any errors you have now installed Asteroid health. 
